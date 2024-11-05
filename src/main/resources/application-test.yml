@@ -1,12 +1,9 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:prod
+    url: jdbc:h2:mem:testdb   # In-memory H2 database
     driver-class-name: org.h2.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-server:
-  port: 8080
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true  # H2 konsolini yoqish
